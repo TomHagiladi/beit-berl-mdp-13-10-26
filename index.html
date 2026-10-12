@@ -82,8 +82,8 @@ textarea.prompt{background:var(--gt);border-color:#CFE3BC;min-height:9rem}
 .chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-size:.95rem}
 .chip:hover{border-color:var(--g)}
 .tip{background:#FFF8E6;border-right:5px solid #E0A800;border-radius:10px;padding:.7rem .9rem;margin-top:.8rem}
-.ok{display:none;background:var(--gp);color:var(--gd);font-weight:800;border-radius:10px;padding:.6rem .9rem;margin-top:.7rem}
-.ok.show{display:block}
+.ok{display:none;background:var(--gp);color:var(--gd);font-weight:800;border-radius:10px;padding:.6rem .9rem;margin-top:.7rem;align-items:center;flex-wrap:wrap;gap:.4rem}
+.ok.show{display:flex}
 .err{display:none;background:var(--rp);color:var(--r);font-weight:700;border-radius:10px;padding:.6rem .9rem;margin-top:.7rem}
 .err.show{display:block}
 .paths{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.5rem}
@@ -163,7 +163,7 @@ footer{max-width:1100px;margin:0 auto;padding:1rem 1.2rem 2rem;color:var(--soft)
     <label for="q-why">מה היא פתחה? מה גילית על הנושא, או על הסטודנט/ית?</label>
     <textarea id="q-why" maxlength="4000"></textarea>
     <div class="row"><button class="btn" id="send-q" type="button">שליחה ללוח</button></div>
-    <div class="ok" id="ok-q" role="status">נשלח. אפשר לחזור לתחנות.</div>
+    <div class="ok" id="ok-q" role="status">נשלח. אפשר לחזור לתחנות. <button class="btn ghost small" data-go="home" type="button" style="margin-right:.6rem">חזרה לתחנות</button></div>
     <div class="err" id="err-q" role="alert"></div>
   </div></div></div>
 </section>
@@ -194,7 +194,7 @@ footer{max-width:1100px;margin:0 auto;padding:1rem 1.2rem 2rem;color:var(--soft)
     <label for="p-summary">ובמשפט אחד או שניים: איך נראה המהלך שנבנה? (לא חובה)</label>
     <textarea id="p-summary" maxlength="4000" style="min-height:4.5rem"></textarea>
     <div class="row"><button class="btn" id="send-p" type="button">שליחה ללוח</button></div>
-    <div class="ok" id="ok-p" role="status">נשלח. אפשר לחזור לתחנות.</div>
+    <div class="ok" id="ok-p" role="status">נשלח. אפשר לחזור לתחנות. <button class="btn ghost small" data-go="home" type="button" style="margin-right:.6rem">חזרה לתחנות</button></div>
     <div class="err" id="err-p" role="alert"></div>
   </div></div></div>
 </section>
@@ -231,7 +231,7 @@ footer{max-width:1100px;margin:0 auto;padding:1rem 1.2rem 2rem;color:var(--soft)
     <label for="b-desc">מה הכלי עושה, ובאיזה רגע בשיעור?</label>
     <textarea id="b-desc" maxlength="2000" style="min-height:4.5rem"></textarea>
     <div class="row"><button class="btn" id="send-b" type="button">שליחה ללוח</button></div>
-    <div class="ok" id="ok-b" role="status">נשלח. הכלי יופיע בגלריה.</div>
+    <div class="ok" id="ok-b" role="status">נשלח. הכלי יופיע בגלריה. <button class="btn ghost small" data-go="home" type="button" style="margin-right:.6rem">חזרה לתחנות</button></div>
     <div class="err" id="err-b" role="alert"></div>
   </div></div></div>
 </section>
@@ -251,7 +251,7 @@ footer{max-width:1100px;margin:0 auto;padding:1rem 1.2rem 2rem;color:var(--soft)
     <label for="m-text">רגע אחד שבו הרגשת את זה:</label>
     <textarea id="m-text" maxlength="2000"></textarea>
     <div class="row"><button class="btn" id="send-m" type="button">שליחה ללוח</button></div>
-    <div class="ok" id="ok-m" role="status">נשלח. תודה!</div>
+    <div class="ok" id="ok-m" role="status">נשלח. תודה! <button class="btn ghost small" data-go="home" type="button" style="margin-right:.6rem">חזרה לתחנות</button></div>
     <div class="err" id="err-m" role="alert"></div>
   </div>
 </section>
