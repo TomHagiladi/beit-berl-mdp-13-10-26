@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>לוח חי - מדריכים פדגוגיים, בית ברל</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#75B743;--gd:#4E8420;--gp:#EDF5E4;--gt:#F5FAF0;--r:#AF242A;--rp:#FBEDEE;--ink:#3A3936;--soft:#5F5D58;--line:#DCE3D3;--bg:#FAFBF8;--focus:#B04A00}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:19px}
+body{margin:0;font-family:'Heebo','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.top{max-width:1500px;margin:0 auto;padding:.7rem 1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:space-between}
+.top h1{margin:0;font-size:1.3rem;color:var(--gd)}
+.top .meta{color:var(--soft);font-size:.9rem}
+.tools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;font-size:.9rem}
+.btn{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .9rem;font-weight:700;font-size:.9rem}
+.btn.danger{color:var(--r);border-color:#E3B5B7}
+.tabs{max-width:1500px;margin:0 auto;padding:0 1.2rem;display:flex;gap:.3rem;flex-wrap:wrap}
+.tab{border:0;background:none;padding:.6rem 1rem;font-size:1.05rem;font-weight:700;color:var(--soft);border-bottom:4px solid transparent}
+.tab[aria-selected=true]{color:var(--gd);border-bottom-color:var(--g)}
+.tab .c{display:inline-block;min-width:1.6rem;background:var(--gp);color:var(--gd);border-radius:999px;padding:0 .45rem;margin-right:.3rem;font-size:.9rem}
+main{max-width:1500px;margin:0 auto;padding:1.2rem}
+.panel[hidden]{display:none}
+.sum{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.sum div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.8rem 1.2rem;min-width:170px}
+.sum b{display:block;font-size:2.2rem;color:var(--gd);line-height:1.1}
+.people{display:flex;flex-wrap:wrap;gap:.5rem}
+.person{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;font-weight:500}
+.person small{color:var(--soft);margin-right:.35rem}
+.person .d{color:var(--gd);font-weight:800;margin-right:.3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:1rem}
+.item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem}
+.who{display:flex;justify-content:space-between;gap:.5rem;align-items:baseline;margin-bottom:.3rem}
+.who .n{font-weight:800;font-size:1.05rem}
+.who .w{color:var(--soft);font-size:.85rem}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.5rem}
+.tag{background:var(--gp);color:var(--gd);border-radius:999px;padding:.05rem .65rem;font-size:.82rem;font-weight:700}
+.tag.warm{background:var(--rp);color:var(--r)}
+.lbl{color:var(--soft);font-size:.85rem;font-weight:700;margin-top:.4rem}
+.txt{white-space:pre-wrap;margin:.1rem 0 0}
+.big{font-size:1.25rem}
+.open{display:inline-block;margin-top:.6rem;background:var(--gd);color:#fff;text-decoration:none;font-weight:800;border-radius:999px;padding:.35rem 1rem}
+.bars{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.2rem;max-width:900px}
+.bar{display:flex;align-items:center;gap:.8rem}
+.bar span{min-width:150px;font-weight:700}
+.bar .tr{flex:1;background:#EEF1EA;border-radius:999px;height:2rem;overflow:hidden}
+.bar .fl{height:100%;background:var(--g);color:#fff;font-weight:800;display:flex;align-items:center;padding:0 .7rem;min-width:2rem}
+.empty{color:var(--soft);padding:1rem 0}
+.banner{display:none;background:var(--rp);color:var(--r);font-weight:700;padding:.5rem 1.2rem;text-align:center}
+.banner.show{display:block}
+</style>
+</head>
+<body>
+<header>
+  <div class="banner" id="conn">אין חיבור למסד הנתונים כרגע. הלוח יתעדכן כשהחיבור יחזור.</div>
+  <div class="top">
+    <div><h1>לוח חי - הסדנה</h1><div class="meta">המדריכים הפדגוגיים &middot; מכללת בית ברל &middot; 13.10.2026 &middot; <span id="count">0</span> משתתפים</div></div>
+    <div class="tools">
+      <label><input type="checkbox" id="show-tests"> להציג בדיקות</label>
+      <button class="btn" id="csv" type="button">הורדת קובץ</button>
+      <button class="btn" id="fs" type="button">מסך מלא</button>
+    </div>
+  </div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="progress">איפה כולם</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="questions"><span class="c" id="c-questions">0</span>שאלות פוריות</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="lessons"><span class="c" id="c-lessons">0</span>מתיאוריה לפרקטיקה</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="tools"><span class="c" id="c-tools">0</span>גלריית הכלים</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="mirror"><span class="c" id="c-mirror">0</span>מראה</button>
+  </div>
+</header>
+<main>
+  <section class="panel" id="p-progress">
+    <div class="sum" id="sum"></div>
+    <div class="people" id="people"></div>
+    <p class="empty" id="e-progress">עוד אין משתתפים. ברגע שמישהו נכנס לאפליקציה, הוא יופיע כאן.</p>
+  </section>
+  <section class="panel" id="p-questions" hidden><div class="grid" id="g-questions"></div><p class="empty" id="e-questions">עוד לא נשלחו שאלות.</p></section>
+  <section class="panel" id="p-lessons" hidden><div class="grid" id="g-lessons"></div><p class="empty" id="e-lessons">עוד לא נשלחו שיעורים.</p></section>
+  <section class="panel" id="p-tools" hidden><div class="grid" id="g-tools"></div><p class="empty" id="e-tools">עוד לא נשלחו כלים.</p></section>
+  <section class="panel" id="p-mirror" hidden><div class="bars" id="bars"></div><div class="grid" id="g-mirror"></div><p class="empty" id="e-mirror">עוד לא נשלחו תשובות.</p></section>
+</main>
+
+<script type="module">
+  const $ = id => document.getElementById(id);
+  const ST = {enter:'בכניסה', home:'בבחירת תחנה', q:'שאלות פוריות', p:'תיאוריה לפרקטיקה', b:'בריסטול דיגיטלי', m:'מראה'};
+  let D = {progress:[], questions:[], lessons:[], tools:[], mirror:[]};
+  let resetEpoch = 0;
+
+  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); $('p-' + x.dataset.t).hidden = !on; });
+  }));
+  $('fs').onclick = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(()=>{});
+
+  const esc = s => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const ms = d => (d.createdAt && d.createdAt.toMillis) ? d.createdAt.toMillis() : Date.now();
+  const isTest = d => d.test === true || (typeof d.name === 'string' && d.name.trim().startsWith('בדיקה'));
+  const vis = d => ms(d) > resetEpoch && ($('show-tests').checked || !isTest(d));
+  const pidOf = d => d.pid || ('name:' + (d.name || ''));
+  const safeUrl = u => { try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.href : null; } catch(e) { return null; } };
+  const when = d => { const m = Math.round((Date.now() - ms(d)) / 60000); if (m < 1) return 'הרגע'; if (m < 60) return `לפני ${m} דק'`; const t = new Date(ms(d)); return `${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`; };
+  const head = d => `<div class="who"><span class="n">${esc(d.name)}</span><span class="w">${when(d)}</span></div>
+    <div class="tags">${d.field ? `<span class="tag">${esc(d.field)}</span>` : ''}${d.topic ? `<span class="tag">${esc(d.topic)}</span>` : ''}${isTest(d) ? '<span class="tag warm">בדיקה</span>' : ''}</div>`;
+
+  function render(){
+    const P = D.progress.filter(vis), Q = D.questions.filter(vis), L = D.lessons.filter(vis), T = D.tools.filter(vis), M = D.mirror.filter(vis);
+    const latest = new Map();
+    P.forEach(d => { const k = pidOf(d); if (!latest.has(k) || ms(d) > ms(latest.get(k))) latest.set(k, d); });
+    const doneBy = new Map();
+    [[Q,'1'],[L,'2'],[T,'3']].forEach(([arr, n]) => arr.forEach(d => { const k = pidOf(d); const s = doneBy.get(k) || new Set(); s.add(n); doneBy.set(k, s); }));
+    const people = [...latest.values()].sort((a,b) => ms(b) - ms(a));
+    $('count').textContent = people.length;
+    const counts = {}; Object.keys(ST).forEach(k => counts[k] = 0);
+    people.forEach(p => { if (counts[p.station] !== undefined) counts[p.station]++; });
+    $('sum').innerHTML = ['q','p','b','home','m'].map(k => `<div>${esc(ST[k])}<b>${counts[k]}</b></div>`).join('');
+    $('people').innerHTML = people.map(p => { const done = [...(doneBy.get(pidOf(p)) || [])].sort().join(' '); return `<span class="person">${esc(p.name)}<small>${esc(ST[p.station] || '')}</small>${done ? `<span class="d">&#10003; ${done}</span>` : ''}</span>`; }).join('');
+    $('e-progress').hidden = people.length > 0;
+
+    const sorted = a => a.slice().sort((x,y) => ms(y) - ms(x));
+    $('c-questions').textContent = Q.length; $('e-questions').hidden = Q.length > 0;
+    $('g-questions').innerHTML = sorted(Q).map(d => `<article class="item">${head(d)}<p class="txt big">${esc(d.question)}</p>${d.why ? `<p class="lbl">מה היא פתחה</p><p class="txt">${esc(d.why)}</p>` : ''}</article>`).join('');
+
+    $('c-lessons').textContent = L.length; $('e-lessons').hidden = L.length > 0;
+    $('g-lessons').innerHTML = sorted(L).map(d => `<article class="item">${head(d)}<div class="tags"><span class="tag warm">${esc(d.practice)}</span></div>${d.summary ? `<p class="lbl">המהלך שנבנה</p><p class="txt">${esc(d.summary)}</p>` : ''}<p class="lbl">השאלות של המד"פ לסטודנט</p><p class="txt big">${esc(d.mentorQs)}</p></article>`).join('');
+
+    $('c-tools').textContent = T.length; $('e-tools').hidden = T.length > 0;
+    $('g-tools').innerHTML = sorted(T).map(d => { const u = safeUrl(d.url); return `<article class="item">${head(d)}<p class="txt big">${esc(d.desc)}</p>${u ? `<a class="open" href="${esc(u)}" target="_blank" rel="noopener">פתיחת הכלי &#8599;</a>` : ''}</article>`; }).join('');
+
+    $('c-mirror').textContent = M.length; $('e-mirror').hidden = M.length > 0;
+    const paths = ['מסלול החשיבה','גם וגם','מסלול הקיצור']; const pc = paths.map(p => M.filter(d => d.path === p).length); const mx = Math.max(1, ...pc);
+    $('bars').innerHTML = M.length ? paths.map((p,i) => `<div class="bar"><span>${p}</span><div class="tr"><div class="fl" style="width:${Math.round(pc[i]/mx*100)}%">${pc[i]}</div></div></div>`).join('') : '';
+    $('g-mirror').innerHTML = sorted(M).filter(d => d.text).map(d => `<article class="item">${head(d)}<div class="tags"><span class="tag warm">${esc(d.path)}</span></div><p class="txt big">${esc(d.text)}</p></article>`).join('');
+  }
+  $('show-tests').addEventListener('change', render);
+  setInterval(render, 30000);
+
+  $('csv').onclick = () => {
+    const f = v => `"${String(v ?? '').replace(/"/g,'""')}"`;
+    const t = d => new Date(ms(d)).toLocaleString('he-IL');
+    const rows = [['סוג','שם','תחום','נושא','פרטים 1','פרטים 2','קישור','זמן']];
+    D.questions.filter(vis).forEach(d => rows.push(['שאלה פורייה', d.name, d.field, d.topic, d.question, d.why, '', t(d)]));
+    D.lessons.filter(vis).forEach(d => rows.push(['תיאוריה לפרקטיקה', d.name, d.field, d.topic, d.practice + ': ' + (d.summary || ''), d.mentorQs, '', t(d)]));
+    D.tools.filter(vis).forEach(d => rows.push(['בריסטול דיגיטלי', d.name, d.field, d.topic, d.desc, '', d.url, t(d)]));
+    D.mirror.filter(vis).forEach(d => rows.push(['מראה', d.name, d.field, d.topic, d.path, d.text, '', t(d)]));
+    const blob = new Blob(['﻿' + rows.map(r => r.map(f).join(',')).join('\r\n')], {type:'text/csv;charset=utf-8'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'beit-berl-mdp-13-10-2026.csv'; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  };
+
+  try {
+    const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
+    const { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
+    const app = initializeApp({
+      apiKey: "AIzaSyC2tCO7o0QODtHVa4PfKCt4eBX7XEtLR9I",
+      authDomain: "ono-health-gallery.firebaseapp.com",
+      projectId: "ono-health-gallery",
+      storageBucket: "ono-health-gallery.firebasestorage.app",
+      messagingSenderId: "315488346817",
+      appId: "1:315488346817:web:1833113a8e8d951694ea40"
+    });
+    const db = getFirestore(app);
+    const err = () => $('conn').classList.add('show');
+    const live = (col, key) => onSnapshot(query(collection(db, col), orderBy('createdAt','desc')),
+      snap => { $('conn').classList.remove('show'); D[key] = snap.docs.map(d => d.data()); render(); }, err);
+    live('mdp_progress','progress'); live('mdp_questions','questions'); live('mdp_lessons','lessons'); live('mdp_tools','tools'); live('mdp_mirror','mirror');
+    onSnapshot(collection(db, 'mdp_admin'), snap => {
+      let latest = 0;
+      snap.forEach(doc => { const d = doc.data(); if (d.kind === 'reset' && d.createdAt && d.createdAt.toMillis) latest = Math.max(latest, d.createdAt.toMillis()); });
+      resetEpoch = latest; render();
+    }, err);
+  } catch (e) { $('conn').classList.add('show'); }
+
+  render();
+</script>
+</body>
+</html>

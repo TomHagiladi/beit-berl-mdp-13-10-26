@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E9A28">
+<meta name="description" content="הנחיות לתרגול - סדנת המדריכים הפדגוגיים, מכללת בית ברל, 13.10.2026. שלוש תחנות לבחירה: שאלות פוריות, מתיאוריה לפרקטיקה, בריסטול דיגיטלי.">
+<title>הנחיות לתרגול - מדריכים פדגוגיים, בית ברל</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='14' y='14' width='36' height='36' rx='6' fill='%2375B743' transform='rotate(24 32 32)'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#75B743; --gd:#4E8420; --gp:#EDF5E4; --gt:#F5FAF0;
+  --r:#AF242A; --rp:#FBEDEE; --ink:#3A3936; --soft:#5F5D58; --line:#DCE3D3; --bg:#FAFBF8; --card:#fff;
+  --focus:#B04A00; --radius:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:19px;-webkit-text-size-adjust:100%}
+@media (max-width:700px){html{font-size:18px}}
+body{margin:0;font-family:'Heebo','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+h1,h2,h3,p{margin:0}
+button,input,select,textarea{font-family:inherit;font-size:1rem;color:var(--ink)}
+button{cursor:pointer}
+a{color:var(--gd)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.skip{position:absolute;top:-100px;right:0;background:var(--gd);color:#fff;padding:.6rem 1.2rem;z-index:99}
+.skip:focus{top:0}
+header{background:#fff;border-bottom:1px solid var(--line)}
+header .w{max-width:1100px;margin:0 auto;padding:.8rem 1.2rem;display:flex;align-items:center;gap:1rem;justify-content:space-between}
+header .t{font-weight:800;font-size:1.05rem;color:var(--gd)}
+header .s{font-size:.85rem;color:var(--soft)}
+header img{height:42px;display:block}
+main{max-width:1100px;margin:0 auto;padding:1.4rem 1.2rem 4rem}
+.screen{display:none}
+.screen.on{display:block;animation:up .35s ease both}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.eyebrow{color:var(--r);font-weight:800;font-size:.95rem;letter-spacing:.02em}
+h2.h{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;color:var(--gd);line-height:1.25;margin:.2rem 0 .5rem}
+.lead{font-size:1.12rem;color:var(--soft);max-width:60ch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1.3rem;margin:1rem 0;box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px rgba(60,80,40,.05)}
+.step{display:flex;gap:.9rem;align-items:flex-start}
+.step .n{flex:none;width:2.1rem;height:2.1rem;border-radius:9px;background:var(--g);color:#fff;font-weight:800;display:grid;place-items:center;transform:rotate(-6deg)}
+.step h3{font-size:1.2rem;font-weight:800;margin:.1rem 0 .3rem}
+.step .b{flex:1;min-width:0}
+.muted{color:var(--soft);font-size:.95rem}
+label{display:block;font-weight:700;margin:.8rem 0 .3rem}
+input[type=text],input[type=url],select,textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:.65rem .8rem;background:#fff}
+textarea{min-height:7rem;resize:vertical;line-height:1.55}
+textarea.prompt{background:var(--gt);border-color:#CFE3BC;min-height:9rem}
+.btn{display:inline-flex;align-items:center;gap:.4rem;border:0;border-radius:999px;padding:.7rem 1.4rem;font-weight:800;font-size:1.02rem;background:var(--gd);color:#fff;text-decoration:none}
+.btn:hover{background:#3F6E18}
+.btn.ghost{background:#fff;color:var(--gd);border:2px solid var(--g)}
+.btn.small{padding:.4rem .9rem;font-size:.92rem}
+.btn:disabled{opacity:.5;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:.7rem}
+.links a{display:inline-block;margin-left:.5rem}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.2rem}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.st{background:#fff;border:2px solid var(--line);border-radius:18px;padding:1.2rem 1.2rem 1rem;display:flex;flex-direction:column;gap:.5rem;text-align:right;position:relative}
+.st:hover{border-color:var(--g)}
+.st .ic{width:3rem;height:3rem;border-radius:12px;background:var(--g);color:#fff;font-weight:800;font-size:1.4rem;display:grid;place-items:center}
+.st h3{font-size:1.35rem;font-weight:800;color:var(--gd)}
+.st p{color:var(--soft)}
+.st .tm{color:var(--r);font-weight:700;font-size:.92rem}
+.st .done{position:absolute;top:1rem;left:1rem;background:var(--gp);color:var(--gd);font-weight:800;border-radius:999px;padding:.15rem .75rem;font-size:.85rem;display:none}
+.st.is-done{border-color:var(--g);background:var(--gt)}
+.st.is-done .done{display:inline-block}
+.mirror-card{margin-top:1rem;background:var(--rp);border:2px dashed #E3B5B7;border-radius:18px;padding:1rem 1.2rem;display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.who{background:var(--gp);border-radius:14px;padding:.8rem 1rem;margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.who b{color:var(--gd)}
+.back{background:none;border:0;color:var(--gd);font-weight:800;padding:.2rem 0;margin-bottom:.6rem}
+.qgroup h4{font-size:1.1rem;font-weight:800;color:var(--gd);margin:1rem 0 .4rem}
+.q{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.6rem .7rem;margin:.5rem 0}
+.q textarea{min-height:3.6rem;background:var(--gt);border-color:#CFE3BC}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.7rem;margin-top:.6rem}
+.pick{background:#fff;border:2px solid var(--line);border-radius:14px;padding:.8rem .9rem;text-align:right}
+.pick b{display:block;font-size:1.05rem;color:var(--gd);margin-bottom:.2rem}
+.pick span{color:var(--soft);font-size:.92rem;line-height:1.45;display:block}
+.pick[aria-pressed=true]{border-color:var(--gd);background:var(--gp);box-shadow:0 0 0 3px #CFE3BC}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-size:.95rem}
+.chip:hover{border-color:var(--g)}
+.tip{background:#FFF8E6;border-right:5px solid #E0A800;border-radius:10px;padding:.7rem .9rem;margin-top:.8rem}
+.ok{display:none;background:var(--gp);color:var(--gd);font-weight:800;border-radius:10px;padding:.6rem .9rem;margin-top:.7rem}
+.ok.show{display:block}
+.err{display:none;background:var(--rp);color:var(--r);font-weight:700;border-radius:10px;padding:.6rem .9rem;margin-top:.7rem}
+.err.show{display:block}
+.paths{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.5rem}
+.paths .pick{flex:1;min-width:180px;text-align:center}
+.toast{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:.6rem 1.2rem;border-radius:999px;font-weight:700;opacity:0;transition:opacity .25s;pointer-events:none;z-index:50}
+.toast.show{opacity:1}
+footer{max-width:1100px;margin:0 auto;padding:1rem 1.2rem 2rem;color:var(--soft);font-size:.85rem;display:flex;gap:1rem;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){.screen.on{animation:none}.toast{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header><div class="w">
+  <div><div class="t">הנחיות לתרגול</div><div class="s">המדריכים הפדגוגיים &middot; מכללת בית ברל &middot; 13.10.2026</div></div>
+  <img src="logo.png" alt="תום הגלעדי">
+</div></header>
+
+<main id="main">
+
+<!-- ===== ENTER ===== -->
+<section class="screen" id="s-enter" aria-labelledby="h-enter">
+  <div class="eyebrow">לפני שיוצאים לדרך</div>
+  <h2 class="h" id="h-enter">את/ה עכשיו הסטודנט/ית שלך</h2>
+  <p class="lead">בכל התחנות עובדים מנקודת המבט של סטודנט/ית שאת/ה מדריך/ה. חשבו על סטודנט/ית אמיתי/ת, ועל נושא שהוא/היא מלמד/ת החודש.</p>
+  <div class="card">
+    <label for="f-name">השם שלך (כך יופיע בלוח)</label>
+    <input type="text" id="f-name" maxlength="80" autocomplete="name">
+    <label for="f-field">התחום</label>
+    <select id="f-field">
+      <option value="">בחירה...</option>
+      <option>גיל רך</option><option>יסודי</option><option>חינוך מיוחד</option><option>על-יסודי</option><option>אנגלית</option><option>אחר</option>
+    </select>
+    <label for="f-subject">מקצוע ושכבה</label>
+    <input type="text" id="f-subject" maxlength="120" placeholder="למשל: מתמטיקה, כיתה ו'">
+    <label for="f-topic">הנושא שהסטודנט/ית מלמד/ת החודש</label>
+    <input type="text" id="f-topic" maxlength="160" placeholder="למשל: מעגל ועיגול">
+    <div class="err" id="enter-err" role="alert">צריך למלא שם ונושא כדי להמשיך.</div>
+    <div class="row"><button class="btn" id="go-home" type="button">יוצאים לדרך</button></div>
+  </div>
+</section>
+
+<!-- ===== HOME ===== -->
+<section class="screen" id="s-home" aria-labelledby="h-home">
+  <div class="eyebrow">שלוש תחנות, את/ה בוחר/ת</div>
+  <h2 class="h" id="h-home">מאיפה מתחילים?</h2>
+  <p class="lead">אפשר את כולן, אפשר שתיים, ואפשר אחת לעומק. הסדר שלכם. מה שתשלחו יופיע בלוח המשותף.</p>
+  <div class="who"><span>הסטודנט/ית שלך מלמד/ת: <b id="who-topic"></b> <span class="muted" id="who-subject"></span></span><button class="btn ghost small" id="edit-who" type="button">שינוי</button></div>
+  <div class="grid">
+    <button class="st" data-go="q" type="button"><span class="done">בוצע</span><span class="ic">1</span><h3>שאלות פוריות</h3><p>שואלים את הבינה שאלות שפותחות את הנושא, ולא רק סוגרות אותו.</p><span class="tm">כ-15 דקות</span></button>
+    <button class="st" data-go="p" type="button"><span class="done">בוצע</span><span class="ic">2</span><h3>מתיאוריה לפרקטיקה</h3><p>בוחרים פרקטיקה פדגוגית, ומתכננים איתה שיעור בשיחת חשיבה.</p><span class="tm">כ-25 דקות</span></button>
+    <button class="st" data-go="b" type="button"><span class="done">בוצע</span><span class="ic">3</span><h3>בריסטול דיגיטלי</h3><p>רגע אחד מהשיעור הופך לכלי דיגיטלי, בקנבס של ג'מיני.</p><span class="tm">כ-30 דקות</span></button>
+  </div>
+  <div class="mirror-card"><div><b>רגע של מראה</b><br><span class="muted">באיזה מסלול היית היום? נעשה את זה יחד בסוף, בערך ב-11:30.</span></div><button class="btn ghost small" data-go="m" type="button">למראה</button></div>
+</section>
+
+<!-- ===== STATION 1: QUESTIONS ===== -->
+<section class="screen" id="s-q" aria-labelledby="h-q">
+  <button class="back" data-go="home" type="button">&rarr; חזרה לתחנות</button>
+  <div class="eyebrow">תחנה 1</div>
+  <h2 class="h" id="h-q">שאלות פוריות</h2>
+  <p class="lead">לפני שמתכננים שיעור, הסטודנט/ית שואל/ת את הבינה שאלות שפותחות את הנושא. הבינה לא מחליטה בשבילו/ה, היא עוזרת לברר.</p>
+  <div class="card"><div class="step"><span class="n">1</span><div class="b">
+    <h3>פותחים צ'אט</h3>
+    <p>ג'מיני, או כל צ'אט אחר שנוח לכם.</p>
+    <div class="row links"><a class="btn small" href="https://gemini.google.com/app" target="_blank" rel="noopener">ג'מיני &#8599;</a><a class="btn ghost small" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT &#8599;</a><a class="btn ghost small" href="https://claude.ai/new" target="_blank" rel="noopener">Claude &#8599;</a></div>
+  </div></div></div>
+  <div class="card"><div class="step"><span class="n">2</span><div class="b">
+    <h3>שואלים, אחת אחרי השנייה</h3>
+    <p class="muted">הנושא כבר משובץ בשאלות. אפשר לערוך כל שאלה לפני ההעתקה. אין חובה לשאול את כולן: בחרו מה שמסקרן אתכם.</p>
+    <div id="qbank"></div>
+    <p class="muted" style="margin-top:.6rem">השאלות מתוך העבודה של פרופ' אמנון גלסנר על השיח עם הבינה כפיגום ללמידה.</p>
+  </div></div></div>
+  <div class="card"><div class="step"><span class="n">3</span><div class="b">
+    <h3>שולחים ללוח</h3>
+    <label for="q-question">איזו שאלה פתחה משהו?</label>
+    <textarea id="q-question" maxlength="2000" style="min-height:4rem"></textarea>
+    <label for="q-why">מה היא פתחה? מה גילית על הנושא, או על הסטודנט/ית?</label>
+    <textarea id="q-why" maxlength="4000"></textarea>
+    <div class="row"><button class="btn" id="send-q" type="button">שליחה ללוח</button></div>
+    <div class="ok" id="ok-q" role="status">נשלח. אפשר לחזור לתחנות.</div>
+    <div class="err" id="err-q" role="alert"></div>
+  </div></div></div>
+</section>
+
+<!-- ===== STATION 2: PRACTICE ===== -->
+<section class="screen" id="s-p" aria-labelledby="h-p">
+  <button class="back" data-go="home" type="button">&rarr; חזרה לתחנות</button>
+  <div class="eyebrow">תחנה 2</div>
+  <h2 class="h" id="h-p">מתיאוריה לפרקטיקה</h2>
+  <p class="lead">הסטודנט/ית למד/ה פרקטיקה פדגוגית בתיאוריה. עכשיו, בשיחת חשיבה עם הבינה, מתכננים איתה שיעור אמיתי על הנושא.</p>
+  <div class="card"><div class="step"><span class="n">1</span><div class="b">
+    <h3>בוחרים פרקטיקה</h3>
+    <div class="cards" id="practices"></div>
+    <label for="p-other">או פרקטיקה אחרת:</label>
+    <input type="text" id="p-other" maxlength="80" placeholder="למשל: למידה מבוססת משחק">
+  </div></div></div>
+  <div class="card"><div class="step"><span class="n">2</span><div class="b">
+    <h3>פותחים שיחת חשיבה</h3>
+    <p class="muted">הפרומפט נבנה מהבחירות שלך. אפשר לערוך אותו, ואז להעתיק לצ'אט.</p>
+    <textarea class="prompt" id="p-prompt" aria-label="הפרומפט לשיחת התכנון"></textarea>
+    <div class="row"><button class="btn small" data-copy="p-prompt" type="button">העתקה</button><button class="btn ghost small" id="p-reset" type="button">חזרה לנוסח המקורי</button><a class="btn ghost small" href="https://gemini.google.com/app" target="_blank" rel="noopener">ג'מיני &#8599;</a></div>
+    <div class="tip"><b>בשיחה עצמה:</b> עונים לשאלות של הבינה כמו שהסטודנט/ית היה/תה עונה. לא מקבלים את ההצעה הראשונה: מבקשים לשנות לפחות דבר אחד, ושואלים "למה?" על שלב אחד.</div>
+  </div></div></div>
+  <div class="card"><div class="step"><span class="n">3</span><div class="b">
+    <h3>עכשיו, עם כובע המד"פ</h3>
+    <label for="p-mentor">אילו שתי שאלות היית שואל/ת את הסטודנט/ית על המערך שנבנה?</label>
+    <textarea id="p-mentor" maxlength="4000"></textarea>
+    <label for="p-summary">ובמשפט אחד או שניים: איך נראה המהלך שנבנה? (לא חובה)</label>
+    <textarea id="p-summary" maxlength="4000" style="min-height:4.5rem"></textarea>
+    <div class="row"><button class="btn" id="send-p" type="button">שליחה ללוח</button></div>
+    <div class="ok" id="ok-p" role="status">נשלח. אפשר לחזור לתחנות.</div>
+    <div class="err" id="err-p" role="alert"></div>
+  </div></div></div>
+</section>
+
+<!-- ===== STATION 3: DIGITAL BRISTOL ===== -->
+<section class="screen" id="s-b" aria-labelledby="h-b">
+  <button class="back" data-go="home" type="button">&rarr; חזרה לתחנות</button>
+  <div class="eyebrow">תחנה 3</div>
+  <h2 class="h" id="h-b">בריסטול דיגיטלי</h2>
+  <p class="lead">פעם נכנסנו לכיתה עם בריסטול. היום אפשר לבנות כלי קטן שתפור לשיעור אחד, בלי לדעת לתכנת.</p>
+  <div class="card"><div class="step"><span class="n">1</span><div class="b">
+    <h3>מה הכלי?</h3>
+    <p class="muted">בחרו רגע אחד בשיעור של הסטודנט/ית, וכתבו מה הכלי יעשה בו. הרעיונות כאן הם רק השראה.</p>
+    <div class="chips" id="ideas"></div>
+    <label for="b-idea">הכלי שלי:</label>
+    <textarea id="b-idea" maxlength="1000" style="min-height:4rem" placeholder="למשל: לוח שבו מזיזים את הרדיוס ורואים איך משתנים ההיקף והשטח"></textarea>
+  </div></div></div>
+  <div class="card"><div class="step"><span class="n">2</span><div class="b">
+    <h3>פותחים קנבס בג'מיני</h3>
+    <p>בג'מיני: לוחצים על כפתור הפלוס שליד תיבת הכתיבה, ובוחרים <b>קנבס</b>. אחר כך מדביקים את הפרומפט.</p>
+    <textarea class="prompt" id="b-prompt" aria-label="הפרומפט לבניית הכלי"></textarea>
+    <div class="row"><button class="btn small" data-copy="b-prompt" type="button">העתקה</button><button class="btn ghost small" id="b-reset" type="button">חזרה לנוסח המקורי</button><a class="btn ghost small" href="https://gemini.google.com/app" target="_blank" rel="noopener">ג'מיני &#8599;</a></div>
+    <div class="tip"><b>שימו לב:</b> הפרומפט מבקש מג'מיני לשאול אתכם שאלות לפני שהוא בונה. ענו לו, ורק אז הוא יבנה.</div>
+  </div></div></div>
+  <div class="card"><div class="step"><span class="n">3</span><div class="b">
+    <h3>בודקים ומתקנים דבר אחד</h3>
+    <p>משחקים בכלי כמו תלמיד/ה. משהו לא עובד או לא ברור? כותבים לג'מיני במילים פשוטות: "הכפתור לא מגיב", "הטקסט קטן מדי", "תוסיף משוב כשטועים".</p>
+  </div></div></div>
+  <div class="card"><div class="step"><span class="n">4</span><div class="b">
+    <h3>משתפים בלוח</h3>
+    <p class="muted">בקנבס יש כפתור "שיתוף" שנותן קישור. בחשבון של משרד החינוך השיתוף חסום, ואז פשוט מתארים את הכלי במילים.</p>
+    <label for="b-url">קישור לכלי (לא חובה)</label>
+    <input type="url" id="b-url" maxlength="500" dir="ltr" placeholder="https://">
+    <label for="b-desc">מה הכלי עושה, ובאיזה רגע בשיעור?</label>
+    <textarea id="b-desc" maxlength="2000" style="min-height:4.5rem"></textarea>
+    <div class="row"><button class="btn" id="send-b" type="button">שליחה ללוח</button></div>
+    <div class="ok" id="ok-b" role="status">נשלח. הכלי יופיע בגלריה.</div>
+    <div class="err" id="err-b" role="alert"></div>
+  </div></div></div>
+</section>
+
+<!-- ===== MIRROR ===== -->
+<section class="screen" id="s-m" aria-labelledby="h-m">
+  <button class="back" data-go="home" type="button">&rarr; חזרה לתחנות</button>
+  <div class="eyebrow">רגע של מראה</div>
+  <h2 class="h" id="h-m">באיזה מסלול היית היום?</h2>
+  <p class="lead">אותו כלי, שני מסלולים. מסלול הקיצור: מבקשים תוצר ומעתיקים. מסלול החשיבה: הלוך ושוב, מסכימים, דוחים, מחדדים.</p>
+  <div class="card">
+    <div class="paths" id="paths" role="group" aria-label="המסלול">
+      <button class="pick" type="button" data-path="מסלול החשיבה" aria-pressed="false"><b>מסלול החשיבה</b><span>חשבתי יחד עם הבינה</span></button>
+      <button class="pick" type="button" data-path="גם וגם" aria-pressed="false"><b>גם וגם</b><span>היו רגעים כאלה וכאלה</span></button>
+      <button class="pick" type="button" data-path="מסלול הקיצור" aria-pressed="false"><b>מסלול הקיצור</b><span>בעיקר לקחתי תוצרים</span></button>
+    </div>
+    <label for="m-text">רגע אחד שבו הרגשת את זה:</label>
+    <textarea id="m-text" maxlength="2000"></textarea>
+    <div class="row"><button class="btn" id="send-m" type="button">שליחה ללוח</button></div>
+    <div class="ok" id="ok-m" role="status">נשלח. תודה!</div>
+    <div class="err" id="err-m" role="alert"></div>
+  </div>
+</section>
+
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<footer><span>סדנת המדריכים הפדגוגיים &middot; מכללת בית ברל &middot; תום הגלעדי</span><a href="accessibility.html">הצהרת נגישות</a></footer>
+
+<script>
+(function(){
+  var KEY='mdp-bb-1013-v1';
+  var defaults={pid:'',name:'',field:'',subject:'',topic:'',screen:'enter',done:{},practice:'',pOther:'',pPrompt:'',bIdea:'',bPrompt:'',path:'',q:{},p:{},b:{},m:{}};
+  var state;
+  try{state=Object.assign({},defaults,JSON.parse(localStorage.getItem(KEY)||'{}'));}catch(e){state=Object.assign({},defaults);}
+  if(!state.pid) state.pid='p'+Math.random().toString(36).slice(2,10);
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+  function $(id){return document.getElementById(id);}
+  function toast(t){var el=$('toast');el.textContent=t;el.classList.add('show');setTimeout(function(){el.classList.remove('show');},1800);}
+
+  var PRACTICES=[
+    ['למידה מבוססת פרויקטים','התלמידים עובדים לאורך זמן על שאלה או בעיה אמיתית, ומגיעים לתוצר שמוצג לקהל.'],
+    ['למידה מבוססת מקום','הסביבה הקרובה - השכונה, החצר, היישוב - היא חומר הלימוד ונקודת המוצא.'],
+    ['שיטת מונטסורי','סביבה מוכנה, חומרים מוחשיים, בחירה של הילד וקצב אישי. המורה מתבונן ומכוון.'],
+    ['כיתה הפוכה','את ההיכרות הראשונה עם החומר עושים לפני השיעור, ובכיתה מתרגלים, דנים ופותרים.'],
+    ['פאזל (ג\'יגסו)','כל תלמיד הופך למומחה לחלק אחד, ומלמד אותו את חבריו לקבוצה.'],
+    ['הוראת חקר','התלמידים שואלים שאלה, משערים, בודקים ומסיקים, כמו חוקרים.'],
+    ['הוראה דיפרנציאלית','אותה מטרה, דרכים שונות: התאמת התוכן, התהליך והתוצר ללומדים השונים.'],
+    ['נוירופדגוגיה','מתכננים לפי מה שידוע על המוח הלומד: קשב, רגש, סקרנות, חזרה מרווחת.'],
+    ['למידה מבוססת משחק','מנגנונים של משחק - אתגר, חוקים, משוב מיידי - בשירות מטרת הלמידה.']
+  ];
+  var IDEAS={
+    'גיל רך':['מעבדת ערבוב צבעים','משחק מיון לפי צורה וצבע','משחק ספירה: כמה פריטים בתמונה'],
+    'יסודי':['משחק זיווגים','לוח שברים שמזיזים','חידון עם משוב מיידי'],
+    'חינוך מיוחד':['משחק מיון עם משוב חיובי בלבד','לוח שגרה יומית בתמונות','לוח בחירה: איך אני מרגיש/ה היום'],
+    'על-יסודי':['לוח פרבולה עם סליידרים','סימולציה של ניסוי','ציר זמן אינטראקטיבי'],
+    'אנגלית':['משחק זיכרון: מילה ותמונה','משחק התאמת מילה ותמונה','בונה משפטים: גוררים מילים לסדר הנכון'],
+    'אחר':['אפליקציה מלווה לעבודה בקבוצות','טיימר עם תפקידים','לוח הצבעה כיתתי']
+  };
+
+  function questions(t){
+    return [
+      ['לעורר סקרנות',[
+        'מה יכול להיות מעניין עבורי ללמוד, להבין או לברר על '+t+'?',
+        'אילו שאלות מסקרנות אפשר לשאול על '+t+'?',
+        'מה בנושא '+t+' עשוי להפתיע אותי, או לערער משהו שאני כבר חושב/ת שאני יודע/ת?'
+      ]],
+      ['לנסח שאלה שמניעה למידה',[
+        'איזו שאלה על '+t+' יכולה להניע למידה שיש בה מקום לגילוי ולהעמקה, ולא רק תשובה קצרה?',
+        'מה אני בעצם רוצה להשיג בלמידה של '+t+': להבין, להסביר, ליצור, לפתור בעיה או משהו אחר?'
+      ]],
+      ['לבחור דרך ומקורות',[
+        'אילו דרכים שונות יש ללמוד את '+t+': קריאה, צפייה, שיחה, ניסוי, תצפית, יצירה, סימולציה?',
+        'איך אבדוק שהמקורות שבחרתי על '+t+' באמת עונים על השאלה שלי, ולא רק קלים או זמינים?'
+      ]]
+    ];
+  }
+  function renderQ(){
+    var t=state.topic||'הנושא', html='';
+    questions(t).forEach(function(g,gi){
+      html+='<div class="qgroup"><h4>'+g[0]+'</h4>';
+      g[1].forEach(function(q,qi){
+        var id='qq'+gi+'_'+qi;
+        html+='<div class="q"><textarea id="'+id+'" aria-label="שאלה">'+esc(q)+'</textarea><div class="row" style="margin-top:.4rem"><button class="btn small" data-copy="'+id+'" type="button">העתקה</button><button class="btn ghost small" data-use="'+id+'" type="button">זו השאלה שפתחה משהו</button></div></div>';
+      });
+      html+='</div>';
+    });
+    $('qbank').innerHTML=html;
+  }
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  function practiceName(){return (state.pOther||'').trim()||state.practice||'';}
+  function pPromptDefault(){
+    var pr=practiceName()||'[הפרקטיקה]';
+    var subj=state.subject?(' ('+state.subject+')'):'';
+    return 'אני סטודנט/ית להוראה'+subj+', ואני מתכנן/ת שיעור על '+(state.topic||'[הנושא]')+' ברוח '+pr+'.\n'+
+      'אל תכתוב לי שיעור מוכן. אני רוצה לחשוב עליו יחד איתך.\n'+
+      'קודם שאל אותי 3-4 שאלות: על הכיתה, על התלמידים, ועל מה שאני כבר יודע/ת על '+pr+'.\n'+
+      'אחר כך הצע מהלך שיעור, שלב אחרי שלב עם זמנים, והסבר איזה עיקרון של '+pr+' כל שלב משרת.\n'+
+      'בסוף, שאל אותי מה הייתי משנה.';
+  }
+  function bPromptDefault(){
+    var subj=state.subject?(' ('+state.subject+')'):'';
+    return 'אני סטודנט/ית להוראה'+subj+', ואני מלמד/ת על '+(state.topic||'[הנושא]')+'.\n'+
+      'באחד הרגעים בשיעור אני רוצה כלי דיגיטלי קטן: '+((state.bIdea||'').trim()||'[תיאור הכלי]')+'.\n'+
+      'לפני שאתה בונה, שאל אותי מה אתה צריך לדעת כדי לבנות אותו בצורה הכי טובה.\n'+
+      'הכלי צריך להיות בעברית, מימין לשמאל, עם כפתורים גדולים וברורים, ושיתאים גם להקרנה בכיתה וגם לעבודה של תלמידים במחשב.';
+  }
+
+  function renderPractices(){
+    $('practices').innerHTML=PRACTICES.map(function(p){
+      return '<button class="pick" type="button" data-pr="'+esc(p[0])+'" aria-pressed="'+(state.practice===p[0]&&!state.pOther?'true':'false')+'"><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></button>';
+    }).join('');
+  }
+  function renderIdeas(){
+    var list=IDEAS[state.field]||IDEAS['אחר'];
+    $('ideas').innerHTML=list.map(function(i){return '<button class="chip" type="button" data-idea="'+esc(i)+'">'+esc(i)+'</button>';}).join('');
+  }
+  function syncPPrompt(force){ if(force||!state.pPromptEdited){ state.pPrompt=pPromptDefault(); $('p-prompt').value=state.pPrompt; } save(); }
+  function syncBPrompt(force){ if(force||!state.bPromptEdited){ state.bPrompt=bPromptDefault(); $('b-prompt').value=state.bPrompt; } save(); }
+
+  /* ---------- reporting (fire and forget) ---------- */
+  function send(col,data){
+    if(!window.mdpSend) return Promise.reject(new Error('nosdk'));
+    return window.mdpSend(col,Object.assign({name:state.name,pid:state.pid,field:state.field||'',subject:state.subject||'',topic:state.topic||''},data));
+  }
+  function progress(st){ if(state.name && window.mdpSend){ send('mdp_progress',{station:st}).catch(function(){}); } }
+
+  /* ---------- navigation ---------- */
+  var screens=['enter','home','q','p','b','m'];
+  function show(s){
+    if(s!=='enter' && (!state.name||!state.topic)) s='enter';
+    state.screen=s; save();
+    screens.forEach(function(k){$('s-'+k).classList.toggle('on',k===s);});
+    if(s==='home') renderHome();
+    if(s==='q') renderQ();
+    if(s==='p'){ renderPractices(); syncPPrompt(false); }
+    if(s==='b'){ renderIdeas(); $('b-idea').value=state.bIdea||''; syncBPrompt(false); }
+    window.scrollTo(0,0);
+    progress(s);
+  }
+  function renderHome(){
+    $('who-topic').textContent=state.topic;
+    $('who-subject').textContent=[state.field,state.subject].filter(Boolean).join(' · ');
+    document.querySelectorAll('.st').forEach(function(b){ b.classList.toggle('is-done',!!state.done[b.getAttribute('data-go')]); });
+  }
+  document.addEventListener('click',function(e){
+    var go=e.target.closest('[data-go]'); if(go){ show(go.getAttribute('data-go')); return; }
+    var cp=e.target.closest('[data-copy]');
+    if(cp){ var ta=$(cp.getAttribute('data-copy')); var v=ta.value;
+      (navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).then(function(){toast('הועתק');},function(){ta.select();document.execCommand('copy');toast('הועתק');});
+      return; }
+    var use=e.target.closest('[data-use]'); if(use){ $('q-question').value=$(use.getAttribute('data-use')).value; $('q-question').focus(); toast('הועבר לשליחה'); return; }
+    var pr=e.target.closest('[data-pr]'); if(pr){ state.practice=pr.getAttribute('data-pr'); state.pOther=''; $('p-other').value=''; renderPractices(); syncPPrompt(false); return; }
+    var idea=e.target.closest('[data-idea]'); if(idea){ $('b-idea').value=idea.getAttribute('data-idea'); state.bIdea=$('b-idea').value; syncBPrompt(false); return; }
+    var path=e.target.closest('[data-path]'); if(path){ state.path=path.getAttribute('data-path'); save(); document.querySelectorAll('[data-path]').forEach(function(b){b.setAttribute('aria-pressed',b===path?'true':'false');}); return; }
+  });
+
+  /* ---------- enter ---------- */
+  $('f-name').value=state.name; $('f-field').value=state.field; $('f-subject').value=state.subject; $('f-topic').value=state.topic;
+  $('go-home').addEventListener('click',function(){
+    var n=$('f-name').value.trim(), t=$('f-topic').value.trim();
+    if(!n||!t){ $('enter-err').classList.add('show'); return; }
+    $('enter-err').classList.remove('show');
+    var topicChanged = t!==state.topic || $('f-subject').value.trim()!==state.subject;
+    state.name=n.slice(0,80); state.field=$('f-field').value; state.subject=$('f-subject').value.trim(); state.topic=t;
+    if(topicChanged){ state.pPromptEdited=false; state.bPromptEdited=false; }
+    save(); show('home');
+  });
+  $('edit-who').addEventListener('click',function(){ show('enter'); });
+
+  /* ---------- station 2 inputs ---------- */
+  $('p-other').addEventListener('input',function(){ state.pOther=this.value; renderPractices(); syncPPrompt(false); });
+  $('p-prompt').addEventListener('input',function(){ state.pPrompt=this.value; state.pPromptEdited=true; save(); });
+  $('p-reset').addEventListener('click',function(){ state.pPromptEdited=false; syncPPrompt(true); toast('הנוסח המקורי חזר'); });
+  /* ---------- station 3 inputs ---------- */
+  $('b-idea').addEventListener('input',function(){ state.bIdea=this.value; syncBPrompt(false); });
+  $('b-prompt').addEventListener('input',function(){ state.bPrompt=this.value; state.bPromptEdited=true; save(); });
+  $('b-reset').addEventListener('click',function(){ state.bPromptEdited=false; syncBPrompt(true); toast('הנוסח המקורי חזר'); });
+  if(state.pOther) $('p-other').value=state.pOther;
+
+  /* ---------- sending ---------- */
+  function wire(btnId,key,build){
+    $(btnId).addEventListener('click',function(){
+      var r=build(); var err=$('err-'+key), ok=$('ok-'+key);
+      err.classList.remove('show'); ok.classList.remove('show');
+      if(r.error){ err.textContent=r.error; err.classList.add('show'); return; }
+      var btn=$(btnId); btn.disabled=true;
+      send(r.col,r.data).then(function(){
+        state.done[key]=true; save(); ok.classList.add('show'); btn.disabled=false;
+      },function(){
+        btn.disabled=false; err.textContent='השליחה לא הצליחה. בדקו את החיבור לאינטרנט ונסו שוב. מה שכתבתם שמור.'; err.classList.add('show');
+      });
+    });
+  }
+  wire('send-q','q',function(){
+    var q=$('q-question').value.trim(), w=$('q-why').value.trim();
+    if(!q) return {error:'כתבו או בחרו את השאלה שפתחה משהו.'};
+    return {col:'mdp_questions',data:{question:q.slice(0,2000),why:w.slice(0,4000)}};
+  });
+  wire('send-p','p',function(){
+    var pr=practiceName(), m=$('p-mentor').value.trim(), s=$('p-summary').value.trim();
+    if(!pr) return {error:'בחרו פרקטיקה בשלב 1.'};
+    if(!m) return {error:'כתבו את השאלות שהייתם שואלים את הסטודנט/ית.'};
+    return {col:'mdp_lessons',data:{practice:pr.slice(0,80),mentorQs:m.slice(0,4000),summary:s.slice(0,4000)}};
+  });
+  wire('send-b','b',function(){
+    var u=$('b-url').value.trim(), d=$('b-desc').value.trim();
+    if(!d) return {error:'כתבו במשפט מה הכלי עושה.'};
+    if(u && !/^https?:\/\//i.test(u)) return {error:'הקישור צריך להתחיל ב-https://'};
+    return {col:'mdp_tools',data:{desc:d.slice(0,2000),url:u.slice(0,500)}};
+  });
+  wire('send-m','m',function(){
+    if(!state.path) return {error:'בחרו מסלול.'};
+    return {col:'mdp_mirror',data:{path:state.path,text:$('m-text').value.trim().slice(0,2000)}};
+  });
+  ['q-question','q-why','p-mentor','p-summary','b-url','b-desc','m-text'].forEach(function(id){
+    var k='draft_'+id; if(state[k]) $(id).value=state[k];
+    $(id).addEventListener('input',function(){ state[k]=this.value; save(); });
+  });
+  if(state.path) document.querySelectorAll('[data-path]').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-path')===state.path?'true':'false');});
+
+  window.addEventListener('mdp-ready',function(){ progress(state.screen); });
+  show(state.screen||'enter');
+})();
+</script>
+
+<!-- Firestore (loads independently; the app works even if this fails) -->
+<script type="module">
+  try {
+    const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
+    const { getFirestore, collection, addDoc, serverTimestamp } =
+      await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
+    const app = initializeApp({
+      apiKey: "AIzaSyC2tCO7o0QODtHVa4PfKCt4eBX7XEtLR9I",
+      authDomain: "ono-health-gallery.firebaseapp.com",
+      projectId: "ono-health-gallery",
+      storageBucket: "ono-health-gallery.firebasestorage.app",
+      messagingSenderId: "315488346817",
+      appId: "1:315488346817:web:1833113a8e8d951694ea40"
+    });
+    const db = getFirestore(app);
+    window.mdpSend = (col, data) => addDoc(collection(db, col), Object.assign({}, data, { createdAt: serverTimestamp() }));
+    window.dispatchEvent(new Event('mdp-ready'));
+  } catch (e) { /* offline: sends show a friendly error, drafts stay saved */ }
+</script>
+</body>
+</html>
